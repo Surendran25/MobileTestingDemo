@@ -16,8 +16,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-Mobile.startApplication(GlobalVariable.apk_File, false)
+String dirName = RunConfiguration.getProjectDir()
+
+dirName = ((((dirName.replaceAll('/', '\\\\') + '\\') + 'APK File') + '\\') + 'IvyDMS_PNGIndia_1567_9911.apk')
+
+println(dirName)
+
+Mobile.startApplication(dirName, false)
 
 if (Mobile.verifyElementVisible(findTestObject('Activation/Allow_button_1'), 5, FailureHandling.OPTIONAL)) {
     Mobile.tap(findTestObject('Activation/Allow_button_1'), 0)
@@ -28,4 +35,3 @@ if (Mobile.verifyElementVisible(findTestObject('Activation/Allow_button_1'), 5, 
 Mobile.delay(5)
 
 Mobile.sendKeys(findTestObject('Activation/Activation Key'), GlobalVariable.Activationkey, FailureHandling.STOP_ON_FAILURE)
-

@@ -9,6 +9,16 @@ import com.kms.katalon.core.main.TestCaseMain
  */
 public class GlobalVariable {
      
+    /**
+     * <p></p>
+     */
+    public static Object apk_File
+     
+    /**
+     * <p></p>
+     */
+    public static Object Activationkey
+     
 
     static {
         try {
@@ -16,6 +26,8 @@ public class GlobalVariable {
 			selectedVariables += TestCaseMain.getGlobalVariables(RunConfiguration.getExecutionProfile())
             selectedVariables += TestCaseMain.getParsedValues(RunConfiguration.getOverridingParameters(), selectedVariables)
     
+            apk_File = selectedVariables['apk_File']
+            Activationkey = selectedVariables['Activationkey']
             
         } catch (Exception e) {
             TestCaseMain.logGlobalVariableError(e)
