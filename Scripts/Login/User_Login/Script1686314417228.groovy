@@ -14,12 +14,13 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import com.kms.katalon.core.util.internal.PathUtil as PathUtil
 
-def appPath = PathUtil.relativeToAbsolutePath(GlobalVariable.apk_File, RunConfiguration.getProjectDir())
+apk_File = 'APK File/IvyDMS_PNGIndia_1567_9911.apk'
+
+def appPath = PathUtil.relativeToAbsolutePath(apk_File, RunConfiguration.getProjectDir())
 
 Mobile.startApplication(appPath, false)
 
@@ -31,4 +32,4 @@ if (Mobile.verifyElementVisible(findTestObject('Activation/Allow_button_1'), 5, 
 
 Mobile.delay(5)
 
-Mobile.sendKeys(findTestObject('Activation/Activation Key'), GlobalVariable.Activationkey, FailureHandling.STOP_ON_FAILURE)
+Mobile.sendKeys(findTestObject('Activation/Activation Key'), 'CPG-SF-RCHXFZAIC', FailureHandling.STOP_ON_FAILURE)

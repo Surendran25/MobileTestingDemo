@@ -3,6 +3,7 @@
    <description></description>
    <name>Mobile Login</name>
    <tag></tag>
+   <delayBetweenInstances>0</delayBetweenInstances>
    <executionMode>SEQUENTIAL</executionMode>
    <maxConcurrentInstances>8</maxConcurrentInstances>
    <testSuiteRunConfigurations>
@@ -10,6 +11,7 @@
          <configuration>
             <groupName>Mobile</groupName>
             <profileName>default</profileName>
+            <requireConfigurationData>true</requireConfigurationData>
             <runConfigurationId>Android</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
