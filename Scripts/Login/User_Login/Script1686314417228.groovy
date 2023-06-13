@@ -17,6 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import com.kms.katalon.core.util.internal.PathUtil as PathUtil
+import internal.GlobalVariable as GlobalVariable
 
 apk_File = 'APK File/IvyDMS_PNGIndia_1567_9911.apk'
 
