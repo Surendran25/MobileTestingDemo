@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'.\\APK File\\IvyDMS_PNGIndia_1567_9911.apk'</initValue>
+      <initValue>'APK File/IvyDMS_PNGIndia_1567_9911.apk'</initValue>
       <name>apk_File</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

@@ -17,14 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
+import com.kms.katalon.core.util.internal.PathUtil as PathUtil
 
-String dirName = RunConfiguration.getProjectDir()
+def appPath = PathUtil.relativeToAbsolutePath(GlobalVariable.apk_File, RunConfiguration.getProjectDir())
 
-dirName = ((((dirName.replaceAll('/', '\\\\') + '\\') + 'APK File') + '\\') + 'IvyDMS_PNGIndia_1567_9911.apk')
-
-println(dirName)
-
-Mobile.startApplication(dirName, false)
+Mobile.startApplication(appPath, false)
 
 if (Mobile.verifyElementVisible(findTestObject('Activation/Allow_button_1'), 5, FailureHandling.OPTIONAL)) {
     Mobile.tap(findTestObject('Activation/Allow_button_1'), 0)
